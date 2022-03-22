@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
-@section('title', 'Home')
+@section('title', 'Comics')
 
 @section('content')
-home
+qui andranno i fumetti
 @endsection
