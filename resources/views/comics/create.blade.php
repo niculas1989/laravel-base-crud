@@ -9,7 +9,8 @@
         <a href="{{ route('comics.index') }}" class="btn btn-primary">Torna Indietro</a>
     </div>
     <div class="card-body">
-        <form action="" method="">
+        <form action="{{ route('comics.store') }}" method="POST">
+            @csrf
             <div class="row">
                 <div class="col-6">
                     <div class="mb-3">
