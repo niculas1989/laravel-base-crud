@@ -4,7 +4,10 @@
 
 @section('content')
 <div class="container">
-    <h2>Lista fumetti</h2>
+    <div class="d-flex justify-content-between align-items-center p-5">
+        <h2>Lista fumetti</h2>
+        <a href="{{ route('comics.create') }}" class="btn btn-primary">Crea</a>
+    </div>
     <div class="row">
         @foreach($comics as $comic)
         <div class="col-2">
