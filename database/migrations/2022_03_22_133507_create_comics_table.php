@@ -13,8 +13,9 @@ class CreateComicsTable extends Migration
      */
     public function up()
     {
-        Schema::table('comics', function (Blueprint $table) {
-            //
+        Schema::create('comics', function (Blueprint $table) {
+            $table->id();
+            $table->timestamps();
         });
     }
 
@@ -25,8 +26,6 @@ class CreateComicsTable extends Migration
      */
     public function down()
     {
-        Schema::table('comics', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('comics');
     }
 }
