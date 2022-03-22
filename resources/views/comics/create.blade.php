@@ -68,8 +68,8 @@
                 </div>
             </div>
             <div class="d-flex justify-content-end align-items-center pt-3">
-                <button class="btn btn-danger me-3">RESET</button>
-                <button class="btn btn-success">SEND</button>
+                <button type="reset" class="btn btn-danger me-3">RESET</button>
+                <button type="submit" class="btn btn-success">SEND</button>
             </div>
         </form>
     </div>
