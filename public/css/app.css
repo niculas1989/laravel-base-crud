@@ -11243,3 +11243,18 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+body {
+  background-color: black;
+  color: white;
+}
+body .card {
+  color: black;
+}
+
+#home {
+  height: 100vh;
+  background-color: black;
+}
+#home h1, #home .h1 {
+  color: red;
+}

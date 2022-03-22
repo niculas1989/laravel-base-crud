@@ -1,1 +1,17 @@
 @import '~bootstrap/scss/bootstrap';
+
+body {
+    background-color: black;
+    color: white;
+    .card {
+        color: black;
+    }
+}
+
+#home {
+    height: 100vh;
+    background-color: black;
+    h1 {
+        color: red;
+    }
+}

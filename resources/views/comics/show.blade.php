@@ -4,6 +4,7 @@
 
 @section('content')
 <div class="container">
+    <a href="{{ route('comics.index') }}" class="btn btn-primary">Torna indietro</a>
     <div class="row">
         <div class="col-4">
             <div class="card">
