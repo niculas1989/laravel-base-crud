@@ -68,6 +68,16 @@ class ComicController extends Controller
      */
     public function edit($id)
     {
+        $request->validate([
+            'title' => ['required', 'string'],
+            'description' => ['required', 'string'],
+            'description' => ['string'],
+            'price' => ['numeric', 'min:1', 'max:1000'],
+            'series' => ['string'],
+            'sale_date' => ['string'],
+            'type' => ['string'],
+        ]);
+
         $comic = Comic::findOrFail($id);
 
         return view('comics.edit', compact('comic'));
@@ -82,6 +92,16 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
+        $request->validate([
+            'title' => ['required', 'string'],
+            'description' => ['required', 'string'],
+            'description' => ['string'],
+            'price' => ['numeric', 'min:1', 'max:1000'],
+            'series' => ['string'],
+            'sale_date' => ['string'],
+            'type' => ['string'],
+        ]);
+
         $data = $request->all();
         $comic->fill($data);
         $comic->save();
