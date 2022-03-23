@@ -11,13 +11,16 @@
     <div class="row">
         @foreach($comics as $comic)
         <div class="col-2">
-            <div class="card">
+            <div class="card mb-4">
                 <img src="{{ $comic['thumb'] }}" class="card-img-top img-fluid" alt="{{ $comic['title'] }}">
                 <div class="card-body">
                     <h5 class="card-title">{{ $comic['title'] }}</h5>
                     <p class="card-text">${{ $comic['series'] }}</p>
                     <p class="card-text">${{ $comic['price'] }}</p>
-                    <div class="d-flex align-items-center justify-content-center">
+                    <a href="{{ route('comics.edit', $comic->id) }}" role="button">
+                        <i class="fa-solid fa-pencil text-success pb-4"></i>
+                    </a>
+                    <div class="d-flex align-items-end justify-content-center">
                         <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
                             @csrf
                             @method('DELETE')
